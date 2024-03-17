@@ -126,10 +126,8 @@ async def _(c, cq):
     txt = cgr("supot")
     kbt = ikb(
         {
-            "Support 1": f"https://t.me/kynansupport",
-            "Support 2": f"https://t.me/gokilsupport",
-            "Channel 1": f"https://t.me/kontenfilm",
-            "Channel 2": f"https://t.me/SquirtInYourPussy",
+            "Support 1": f"https://t.me/Shekhawat2",
+            "Channel 1": f"https://t.me/Shekhawat2",
             "Stats": "stats_mix",
         }
     )

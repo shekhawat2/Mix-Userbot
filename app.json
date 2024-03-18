@@ -6,8 +6,8 @@
         "Pyrogram",
         "Userbot"
     ],
-    "repository": "https://github.com/naya1503/Mix-Userbot",
-    "success_url": "https://t.me/kenapanan",
+    "repository": "https://github.com/Shekhawat2/Mix-Userbot",
+    "success_url": "https://t.me/shekhawat2",
     "stack": "container",
     "env": {
         "api_id": {

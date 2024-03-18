@@ -16,12 +16,12 @@ __help__ = get_cgr("help_repo")
 
 @ky.ubot("repo|repository", sudo=True)
 async def repo(c, m):
-    link = await get("https://api.github.com/repos/naya1503/Mix-Userbot/contributors")
+    link = await get("https://api.github.com/repos/Shekhawat2/Mix-Userbot/contributors")
     orgnya = "".join(
         f"**{count}.** [{org['login']}]({org['html_url']})\n"
         for count, org in enumerate(link, start=1)
     )
-    msg = f"""<b>[Github](https://github.com/naya1503/Mix-Userbot) | [Group](t.me/kynansupport)
+    msg = f"""<b>[Github](https://github.com/Shekhawat2/Mix-Userbot) | [Group](t.me/Shekhawat2)
 ```----------------
 | Contributors |
 ----------------```

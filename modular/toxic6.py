@@ -21,10 +21,10 @@ async def _(c: nlx, m):
     asyncio.sleep(3)
     await uputt.edit("**Userbot base on Pyrogram**")
     asyncio.sleep(2)
-    await uputt.edit("**Part Of @KynanSupport... Salam Kenal yaaa ><**")
+    await uputt.edit("**Part Of @Shekhawat2... Salam Kenal yaaa ><**")
     asyncio.sleep(3)
     await uputt.edit(
-        "**Repository [Mix-Userbot](https://github.com/naya1503/Mix-Userbot)**"
+        "**Repository [Mix-Userbot](https://github.com/Shekhawat2/Mix-Userbot)**"
     )
 
 

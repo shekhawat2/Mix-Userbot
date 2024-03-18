@@ -50,14 +50,15 @@ async def _(c: nlx, m):
 async def _(c: nlx, m):
     noble = random.randint(1, len(NOBLE) - 2)
     reply_text = NOBLE[noble]
-    await m.reply(reply_text, reply_to_message_id=ReplyCheck(m))
+    await m.edit(reply_text)
 
 
 @ky.ubot("wink", sudo=True)
 async def _(c: nlx, m):
     em = Emojik()
     em.initialize()
-    proses = await m.reply(f"{em.proses} <b>Sedang proses ..</b>")
+    proses = await m.edit(f"{em.proses} <b>Processing...</b>")
+    await m.delete()
     hmm_s = "https://some-random-api.com/animu/wink"
     r = requests.get(url=hmm_s).json()
     image_s = r["link"]
@@ -69,7 +70,7 @@ async def _(c: nlx, m):
 async def _(c: nlx, m):
     em = Emojik()
     em.initialize()
-    proses = await m.reply(f"{em.proses} <b>Sedang proses ...</b>")
+    proses = await m.edit(f"{em.proses} <b>Processing...</b>")
     hmm_s = "https://some-random-api.com/animu/hug"
     r = requests.get(url=hmm_s).json()
     image_s = r["link"]
@@ -83,7 +84,7 @@ async def _(c: nlx, m):
     em.initialize()
     hmm_s = "https://some-random-api.com/animu/pat"
     try:
-        proses = await m.reply(f"{em.proses} <b>Sedang proses ..</b>")
+        proses = await m.reply(f"{em.proses} <b>Processing...</b>")
         r = requests.get(url=hmm_s).json()
         image_s = r["link"]
         await c.send_video(m.chat.id, image_s, reply_to_message_id=ReplyCheck(m))
@@ -100,7 +101,7 @@ async def _(c: nlx, m):
     hmm_s = "https://some-random-api.com/img/pikachu"
     r = requests.get(url=hmm_s).json()
     image_s = r["link"]
-    proses = await m.reply(f"{em.proses} <b>Sedang proses ...</b>")
+    proses = await m.edit(f"{em.proses} <b>Processing...</b>")
     await c.send_video(m.chat.id, image_s)
     await proses.delete()
     if image_s.endswith(".png"):
@@ -115,15 +116,14 @@ async def _(c: nlx, m):
 
 @ky.ubot("hmm", sudo=True)
 async def _(c: nlx, m):
-    mg = await m.reply(
-        "┈┈╱▔▔▔▔▔╲┈┈┈HM┈HM\n┈╱┈┈╱▔╲╲╲▏┈┈┈HMMM\n╱┈┈╱━╱▔▔▔▔▔╲━╮┈┈\n▏┈▕┃▕╱▔╲╱▔╲▕╮┃┈┈\n▏┈▕╰━▏▊▕▕▋▕▕━╯┈┈\n╲┈┈╲╱▔╭╮▔▔┳╲╲┈┈┈\n┈╲┈┈▏╭━━━━╯▕▕┈┈┈\n┈┈╲┈╲▂▂▂▂▂▂╱╱┈┈┈\n┈┈┈┈▏┊┈┈┈┈┊┈┈┈╲\n┈┈┈┈▏┊┈┈┈┈┊▕╲┈┈╲\n┈╱▔╲▏┊┈┈┈┈┊▕╱▔╲▕\n┈▏┈┈┈╰┈┈┈┈╯┈┈┈▕▕\n┈╲┈┈┈╲┈┈┈┈╱┈┈┈╱┈╲\n┈┈╲┈┈▕▔▔▔▔▏┈┈╱╲╲╲▏\n┈╱▔┈┈▕┈┈┈┈▏┈┈▔╲▔▔\n┈╲▂▂▂╱┈┈┈┈╲▂▂▂╱┈ ",
-        reply_to_message_id=ReplyCheck(m),
+    mg = await m.edit(
+        "┈┈╱▔▔▔▔▔╲┈┈┈HM┈HM\n┈╱┈┈╱▔╲╲╲▏┈┈┈HMMM\n╱┈┈╱━╱▔▔▔▔▔╲━╮┈┈\n▏┈▕┃▕╱▔╲╱▔╲▕╮┃┈┈\n▏┈▕╰━▏▊▕▕▋▕▕━╯┈┈\n╲┈┈╲╱▔╭╮▔▔┳╲╲┈┈┈\n┈╲┈┈▏╭━━━━╯▕▕┈┈┈\n┈┈╲┈╲▂▂▂▂▂▂╱╱┈┈┈\n┈┈┈┈▏┊┈┈┈┈┊┈┈┈╲\n┈┈┈┈▏┊┈┈┈┈┊▕╲┈┈╲\n┈╱▔╲▏┊┈┈┈┈┊▕╱▔╲▕\n┈▏┈┈┈╰┈┈┈┈╯┈┈┈▕▕\n┈╲┈┈┈╲┈┈┈┈╱┈┈┈╱┈╲\n┈┈╲┈┈▕▔▔▔▔▏┈┈╱╲╲╲▏\n┈╱▔┈┈▕┈┈┈┈▏┈┈▔╲▔▔\n┈╲▂▂▂╱┈┈┈┈╲▂▂▂╱┈ "
     )
 
 
 @ky.ubot("ahh", sudo=True)
 async def hello_world(c: nlx, m):
-    mg = await m.reply("ahh", reply_to_message_id=ReplyCheck(m))
+    mg = await m.edit("ahh")
     await asyncio.sleep(0.2)
     await mg.edit("aahh")
     await asyncio.sleep(0.2)
@@ -200,8 +200,8 @@ async def _(c: nlx, m):
         return
     animation_interval = 3
     animation_ttl = range(0, 18)
-    xu = await m.reply(
-        "Calling Pavel Durov (ceo of telegram)......", reply_to_message_id=ReplyCheck(m)
+    xu = await m.edit(
+        "Calling Pavel Durov (ceo of telegram)......"
     )
     animation_chars = [
         "`Connecting To Telegram Headquarters...`",
@@ -234,7 +234,7 @@ async def _(c: nlx, m):
         return
     animation_interval = 0.7
     animation_ttl = range(0, 12)
-    xi = await m.reply("ready to die dude.....", reply_to_message_id=ReplyCheck(m))
+    xi = await m.edit("ready to die dude.....")
     animation_chars = [
         "Ｆｉｉｉｉｉｒｅ",
         "(　･ิω･ิ)︻デ═一-->",
@@ -247,7 +247,7 @@ async def _(c: nlx, m):
         "------------------>",
         "------>;(^。^)ノ",
         "(￣ー￣) DEAD",
-        "<b>Mrr Gya Matherchod lala la 😈.😈.😈.😈.😈.😈.😈......</b>\n '#Sad_Reacts_Online'\n",
+        "<b>Mrr Gya Maccharchod lala la 😈.😈.😈.😈.😈.😈.😈......</b>\n '#Sad_Reacts_Online'\n",
     ]
     for i in animation_ttl:
         await asyncio.sleep(animation_interval)
@@ -258,7 +258,7 @@ async def _(c: nlx, m):
 async def _(c: nlx, m):
     em = Emojik()
     em.initialize()
-    proses = await m.reply(f"{em.proses} <b>Sedang proses ...</b>")
+    proses = await m.edit(f"{em.proses} <b>Processing...</b>")
     if m.forward_from:
         return
     animation_interval = 0.8
@@ -371,7 +371,7 @@ async def _(c: nlx, m):
 
 @ky.ubot("kocok", sudo=True)
 async def _(c: nlx, m):
-    e = await m.reply("8✊===D", reply_to_message_id=ReplyCheck(m))
+    e = await m.edit("8✊===D")
     await e.edit("8=✊==D")
     await e.edit("8==✊=D")
     await e.edit("8===✊D")
@@ -405,9 +405,8 @@ async def _(c: nlx, m):
 
 @ky.ubot("hack", sudo=True)
 async def _(c: nlx, m):
-    re = await m.reply(
-        "Looking for WhatsApp databases in targeted person...",
-        reply_to_message_id=ReplyCheck(m),
+    re = await m.edit(
+        "Looking for WhatsApp databases in targeted person..."
     )
     await asyncio.sleep(2)
     await re.edit_text(" User online: True\nTelegram access: True\nRead Storage: True ")
@@ -469,7 +468,7 @@ async def _(c: nlx, m):
     kontol = MEMES.GAMBAR_KONTOL
     if emoji:
         kontol = kontol.replace("⡀", emoji)
-    await m.reply(kontol, reply_to_message_id=ReplyCheck(m))
+    await m.edit(kontol)
 
 
 @ky.ubot("titit|titid", sudo=True)
@@ -478,12 +477,12 @@ async def _(c: nlx, m):
     titid = MEMES.GAMBAR_TITIT
     if emoji:
         titid = titid.replace("😋", emoji)
-    await m.reply(titid, reply_to_message_id=ReplyCheck(m))
+    await m.edit(titid)
 
 
 @ky.ubot("dino", sudo=True)
 async def _(c: nlx, m):
-    typew = await m.reply("`DIN DINNN.....`", reply_to_message_id=ReplyCheck(m))
+    typew = await m.edit("`DIN DINNN.....`", reply_to_message_id=ReplyCheck(m))
     await asyncio.sleep(1)
     await typew.edit("`DINOOOOSAURUSSSSS!!`")
     await asyncio.sleep(1)
@@ -540,7 +539,7 @@ async def _(c: nlx, m):
 
 @ky.ubot("syg|sayang|seng", sudo=True)
 async def _(c: nlx, m):
-    e = await m.reply("I LOVEE YOUUU 💕", reply_to_message_id=ReplyCheck(m))
+    e = await m.edit("I LOVEE YOUUU 💕")
     await e.edit("💝💘💓💗")
     await asyncio.sleep(1.2)
     await e.edit("💞💕💗💘")
@@ -590,8 +589,8 @@ async def _(c: nlx, m):
 
 @ky.ubot("gabut|gbt", sudo=True)
 async def _(c: nlx, m):
-    e = await m.reply(
-        "`PERNAAHHHHH KAHHH KAUUU MENGIRA`", reply_to_message_id=ReplyCheck(m)
+    e = await m.edit(
+        "`PERNAAHHHHH KAHHH KAUUU MENGIRA`"
     )
     await e.edit("`SEPEEERTIIIII APAAAA BENTUKKKKKKK CINTAAAA`")
     await e.edit("`RAMBUUUT WARNAAA WARNII`")
@@ -795,7 +794,7 @@ async def _(c: nlx, m):
 
 @ky.ubot("heli|helikopter", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
+    await m.edit(
         "▬▬▬.◙.▬▬▬ \n"
         "═▂▄▄▓▄▄▂ \n"
         "◢◤ █▀▀████▄▄▄▄◢◤ \n"
@@ -808,7 +807,7 @@ async def _(c: nlx, m):
         "╬═╬ \n"
         "╬═╬ \n"
         "╬═╬ \n"
-        "╬═╬ Hallo Semuanya :) \n"
+        "╬═╬ Hello Everyone :) \n"
         "╬═╬☻/ \n"
         "╬═╬/▌ \n"
         "╬═╬/ \\ \n",
@@ -817,15 +816,15 @@ async def _(c: nlx, m):
 
 @ky.ubot("tembak", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
-        "_/﹋\\_\n" "(҂`_´)\n" "<,︻╦╤─ ҉\n" r"_/﹋\_" "\n<b>Mau Jadi Pacarku Gak?!</b>",
+    await m.edit(
+        "_/﹋\\_\n" "(҂`_´)\n" "<,︻╦╤─ ҉\n" r"_/﹋\_" "\n<b>Do you want to be my girlfriend?!</b>",
     )
 
 
 @ky.ubot("bundir", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
-        "`Dadah Semuanya...`          \n　　　　　|"
+    await m.edit(
+        "`Bye-bye everyone...`          \n　　　　　|"
         "\n　　　　　| \n"
         "　　　　　| \n"
         "　　　　　| \n"
@@ -844,7 +843,7 @@ async def _(c: nlx, m):
 
 @ky.ubot("awk|awok", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
+    await m.edit(
         "────██──────▀▀▀██\n"
         "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
         "▄▀──█▄▄──────█─█▄▄\n"
@@ -855,7 +854,7 @@ async def _(c: nlx, m):
 
 @ky.ubot("y|oke", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
+    await m.edit(
         "‡‡‡‡‡‡‡‡‡‡‡‡▄▄▄▄\n"
         "‡‡‡‡‡‡‡‡‡‡‡█‡‡‡‡█\n"
         "‡‡‡‡‡‡‡‡‡‡‡█‡‡‡‡█\n"
@@ -868,14 +867,13 @@ async def _(c: nlx, m):
         "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡█\n"
         "▓▓▓▓▓▓█‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡‡█\n"
         "▓▓▓▓▓▓█████‡‡‡‡‡‡‡‡‡‡‡‡██\n"
-        "█████‡‡‡‡‡‡‡██████████\n",
-        reply_to_message_id=ReplyCheck(m),
+        "█████‡‡‡‡‡‡‡██████████\n"
     )
 
 
 @ky.ubot("tank", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
+    await m.edit(
         "█۞███████]▄▄▄▄▄▄▄▄▄▄▃ \n"
         "▂▄▅█████████▅▄▃▂…\n"
         "[███████████████████]\n"
@@ -885,9 +883,9 @@ async def _(c: nlx, m):
 
 @ky.ubot("babi", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
+    await m.edit(
         "┈┈┏━╮╭━┓┈╭━━━━╮\n"
-        "┈┈┃┏┗┛┓┃╭┫Ngok ┃\n"
+        "┈┈┃┏┗┛┓┃╭┫By ┃\n"
         "┈┈╰┓▋▋┏╯╯╰━━━━╯\n"
         "┈╭━┻╮╲┗━━━━╮╭╮┈\n"
         "┈┃▎▎┃╲╲╲╲╲╲┣━╯┈\n"
@@ -899,7 +897,7 @@ async def _(c: nlx, m):
 
 @ky.ubot("ajg", sudo=True)
 async def _(c: nlx, m):
-    await m.reply(
+    await m.edit(
         "╥━━━━━━━━╭━━╮━━┳\n"
         "╢╭╮╭━━━━━┫┃▋▋━▅┣\n"
         "╢┃╰┫┈┈┈┈┈┃┃┈┈╰┫┣\n"
@@ -911,18 +909,18 @@ async def _(c: nlx, m):
 
 @ky.ubot("nah", sudo=True)
 async def _(c: nlx, m):
-    typew = await m.reply("`\n(\\_/)`" "`\n(●_●)`" "`\n />💖 *Ini Buat Kamu`")
+    typew = await m.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />💖 *Here's to You`")
     await asyncio.sleep(2)
-    await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n💖<\\  *Tapi Bo'ong`")
+    await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n💖<\\  *But Bo'ong`")
 
 
 @ky.ubot("santet", sudo=True)
 async def _(c: nlx, m):
-    typew = await m.reply("`Mengaktifkan Perintah Santet Online....`")
+    typew = await m.edit("`Activating Online Electrocution Command...`")
     await asyncio.sleep(2)
-    await typew.edit("`Mencari Nama Orang Ini...`")
+    await typew.edit("`Looking for the name of this person...`")
     await asyncio.sleep(1)
-    await typew.edit("`Santet Online Segera Dilakukan`")
+    await typew.edit("`Online Electrocution to be carried out soon`")
     await asyncio.sleep(1)
     await typew.edit("0%")
     number = 1
@@ -1225,4 +1223,4 @@ async def _(c: nlx, m):
     await asyncio.sleep(0.03)
     await typew.edit(str(number) + "%   ████████████████▌")
     await asyncio.sleep(1)
-    await typew.edit("<b>Target Berhasil Tersantet Online 🥴</b>")
+    await typew.edit("<b>Target Successfully Chanted Online 🥴</b>")

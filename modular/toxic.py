@@ -15,10 +15,10 @@ __help__ = "Toxic"
 @ky.ubot("a", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOU LOST YOUR ACCOUNT, YOU BASTARD??**")
         return
     await m.reply(
-        "**ANAK KONTOL, MUKA KEK JEMBUT MASIH MAEN TELE ?**",
+        "**DICK BOY, BEARDED FACE STILL PLAYING TELE. ?**",
         reply_to_message_id=ReplyCheck(m),
     )
     await m.delete()
@@ -27,10 +27,10 @@ async def _(c: nlx, m):
 @ky.ubot("b", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS LOST, BITCH??**")
         return
     await m.reply(
-        "**BAJINGAN!! KEREN LOE GITU ? CUIH ANAK HASIL CLONE BELAGU**",
+        "**FUCK!!! HOW COOL ARE YOU? WHAT A CLONE OF A CHILD.**",
         reply_to_message_id=ReplyCheck(m),
     )
     await m.delete()
@@ -39,10 +39,10 @@ async def _(c: nlx, m):
 @ky.ubot("c", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS LOST, BITCH??**")
         return
     await m.reply(
-        "**CEBOK LAH DEK MINIMAL SEBELUM TYPING!!**", reply_to_message_id=ReplyCheck(m)
+        "**WASH YOUR MOUTH AT LEAST BEFORE TYPING!!!**", reply_to_message_id=ReplyCheck(m)
     )
     await m.delete()
 
@@ -50,10 +50,10 @@ async def _(c: nlx, m):
 @ky.ubot("d", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS GONE, BITCH?**")
         return
     await m.reply(
-        "**DARI KEMAREN GW LIATIN MUKA LU KAGA BENER-BENER!! KEBENGKEL LAS DULU SONO. TAMBEL ITU MUKA LOE YANH BOPAK**",
+        "**I'VE BEEN LOOKING AT YOUR FACE FOR A LONG TIME! GO TO THE WELDING WORKSHOP FIRST. PATCH THAT FACE YOU YANH BOPAK**",
         reply_to_message_id=ReplyCheck(m),
     )
     await m.delete()
@@ -62,10 +62,10 @@ async def _(c: nlx, m):
 @ky.ubot("e", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS GONE, BITCH?**")
         return
     await m.reply(
-        "**EALAH INI TOH PETINGGI TELE ? JUJURLY MUKA LU KEK JAMET PASAR SENEN BANG. MENDING LOE NGADUK SEMEN!!**",
+        "**IS THIS A HIGH-RANKING TELE? HONESTLY, YOUR FACE IS LIKE THE JAMET OF SENEN MARKET. YOU BETTER STIR THE CEMENT!**",
         reply_to_message_id=ReplyCheck(m),
     )
     await m.delete()
@@ -74,10 +74,10 @@ async def _(c: nlx, m):
 @ky.ubot("f", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS LOST, BITCH??**")
         return
     await m.reply(
-        "**FANTAT LOE BURIK YA ? SOALNYA MUKA LU KEREMIAN!!**",
+        "**YOU HAVE A BAD FACE, DON'T YOU? BECAUSE YOUR FACE IS DIM!!**",
         reply_to_message_id=ReplyCheck(m),
     )
     await m.delete()
@@ -276,10 +276,10 @@ async def _(c: nlx, m):
 @ky.ubot("x", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS LOST, BITCH??**")
         return
     await m.reply(
-        "**DIEM MEMEG, MUKA JERAWATN BANYAK BACOT LU!!**",
+        "**DIEM MEMEG, FACE PIMPLESN A LOT OF YOUR TALK!!**",
         reply_to_message_id=ReplyCheck(m),
     )
 
@@ -287,9 +287,9 @@ async def _(c: nlx, m):
 @ky.ubot("z", sudo=True)
 async def _(c: nlx, m):
     if m.reply_to_message and m.reply_to_message.from_user.id in DEVS:
-        await m.reply("**AKUN LO MO ILANG BANGSAT??**")
+        await m.reply("**YOUR ACCOUNT IS LOST, BITCH??**")
         return
     await m.reply(
-        "**DIEM BANGSAT, BACOT MULU DARI KEMAREN. JADI BEBAN DOANG BELAGU LU. GAWE TONG GAWE, LAA PUNYA AKAL SI DIDIEMIN KAGA DIPAKE**",
+        "**SHUT THE FUCK UP, YOU'VE BEEN TALKING SINCE YESTERDAY. BE A BURDEN TO YOU. GAWE TONG GAWE, LAA HAVE SENSE SI DIDIEMIN KAGA DIPAKE**",
         reply_to_message_id=ReplyCheck(m),
     )

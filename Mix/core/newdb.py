@@ -10,7 +10,7 @@ from team.nandev.database import ndB
 
 
 def get_stuff():
-    return ndB.get_key("BOTCHAT") or {}
+    return {}
 
 
 def add_stuff(msg_id, user_id):
